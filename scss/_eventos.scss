@@ -1,0 +1,78 @@
+$azul: #5628FC;
+$violeta:#9523D9;
+$lila: #F032E3;
+$nose:#D92344;
+$rojo:#FA2900;
+
+$eventos: ( /*Declaramos nuestro mapa*/
+        eventoDos: #5628FC,
+        eventoTres:#9523D9,
+        eventoCuatro:#F032E3,
+        eventoCinco:#D92344,
+        eventoSeis:#FA2900,
+);
+/*Creamos el bucle para usar los valores del mapa*/
+@each $evento, $color in $eventos  {
+   .#{$evento} {
+       background-color: $color;
+   }
+}
+
+
+.grid-container {
+	display: grid;
+	margin: 40px 0 40px 0;
+	grid-template-columns: repeat(4,25%);
+	grid-template-rows: repeat(3,200px);
+	gap: 1px 1px;
+	text-align: center;
+	justify-content: stretch;
+	font-size: 1.5rem;
+  grid-template-areas:
+	"principal principal principal principal"
+	"eventoDos eventoDos eventoTres eventoCuatro"
+	"eventoCinco eventoSeis eventoSiete eventoCuatro";
+}
+
+.principal {
+	grid-area: principal;
+	background-color: gray;
+}
+.eventoTres {
+	grid-area: eventoTres;
+//	background-color: $azul;
+
+}
+.eventoDos {
+	grid-area: eventoDos;
+//	background-color: $violeta;
+}
+.eventoCuatro {
+	grid-area: eventoCuatro;
+	//background-color: $lila;
+}
+.eventoCinco {
+	grid-area: eventoCinco;
+//	background-color: $nose;
+}
+.eventoSeis {
+	grid-area: eventoSeis;
+//	background-color: $rojo;
+}
+.eventoSiete {
+	grid-area: eventoSiete;
+	background-color: #CDE1E3;
+}
+
+
+.notaUno{
+  padding: 10px 5px;
+  color: $lila;
+  text-align: left;
+}
+
+.notaDos{
+  @extend .notaUno;
+  color: $rojo;
+  text-align: center;
+}

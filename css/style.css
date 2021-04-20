@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.topnav {
+  overflow: hidden;
+  background-color: #333; }
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px; }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black; }
+  .topnav .active {
+    background-color: #4CAF50;
+    color: white; }
+
+/*Creamos el bucle para usar los valores del mapa*/
+.eventoDos {
+  background-color: #5628FC; }
+
+.eventoTres {
+  background-color: #9523D9; }
+
+.eventoCuatro {
+  background-color: #F032E3; }
+
+.eventoCinco {
+  background-color: #D92344; }
+
+.eventoSeis {
+  background-color: #FA2900; }
+
+.grid-container {
+  display: grid;
+  margin: 40px 0 40px 0;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(3, 200px);
+  gap: 1px 1px;
+  text-align: center;
+  justify-content: stretch;
+  font-size: 1.5rem;
+  grid-template-areas: "principal principal principal principal" "eventoDos eventoDos eventoTres eventoCuatro" "eventoCinco eventoSeis eventoSiete eventoCuatro"; }
+
+.principal {
+  grid-area: principal;
+  background-color: gray; }
+
+.eventoTres {
+  grid-area: eventoTres; }
+
+.eventoDos {
+  grid-area: eventoDos; }
+
+.eventoCuatro {
+  grid-area: eventoCuatro; }
+
+.eventoCinco {
+  grid-area: eventoCinco; }
+
+.eventoSeis {
+  grid-area: eventoSeis; }
+
+.eventoSiete {
+  grid-area: eventoSiete;
+  background-color: #CDE1E3; }
+
+.notaUno, .notaDos {
+  padding: 10px 5px;
+  color: #F032E3;
+  text-align: left; }
+
+.notaDos {
+  color: #FA2900;
+  text-align: center; }
